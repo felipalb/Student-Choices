@@ -7,5 +7,14 @@
 
 import Foundation
 
-print("Hello, World!")
+print ("Teste input")
+var Naluno : String = ""
+if let input = readLine() {
+    Naluno = input
+    print("Olá, \(Naluno)")
+}
+
+
+
+
 
