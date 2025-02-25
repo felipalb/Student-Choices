@@ -75,11 +75,13 @@ if let SelectedGen = Gender {
 while Age <= 0 {
     print ("Qual é a sua Idade?")
     if let input = readLine(), !input.isEmpty, let idade = Int(input){
+        // le o input, verifica se não é nulo, cria a variavel temp. idade int que recebe o input
         if idade < 16 {
+        // faz validacao da idade
             print("tem certeza de que você é um universitário?!")
         }else{
             Age = idade
-            
+        // adiiona para a variavel, o valor da variavel temp.
         }
     }
     else{print("Valor invalido")}
@@ -88,3 +90,4 @@ while Age <= 0 {
 
 
 print("sua idade é: \(Age)")
+// retorna dados
