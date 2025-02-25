@@ -66,11 +66,6 @@ if Gender == "Outro" {
     Gender = "Neutro"
 }
 
-// chamo uma variavel provisoria para receber o valor de gender
-if let SelectedGen = Gender {
-    print("você é do genero: \(SelectedGen)\n")
-}
-// retorna genero
 
 while Age <= 0 {
     print ("Qual é a sua Idade?")
@@ -81,13 +76,27 @@ while Age <= 0 {
             print("tem certeza de que você é um universitário?!")
         }else{
             Age = idade
-        // adiiona para a variavel, o valor da variavel temp.
+        // adiciona para a variavel, o valor da variavel temp.
         }
     }
     else{print("Valor invalido")}
 }
 
-
-
-print("sua idade é: \(Age)")
+while University.isEmpty{
+// continua executando enquanto o nome for uma string vazia
+    print("Insira o nome da universidade: \n")
+        if let input = readLine(), !input.isEmpty {
+            // if para ler a linha (readLine)
+            // verifica se a entrada não está vazia
+            University = input
+            print("Bem vindo a \(University), \(NameStudent)")
+        }
+    else{
+        print("informe o nome da universidade")
+    }
+}
+if let SelectedGen = Gender {
+print("Os dados do seu personagem são: \n nome: \(NameStudent);\n Idade: \(Age);\n Genero: \(SelectedGen);\n Universidade: \(University).")
+}
+// gender está com ! pois é um valor nil, o swift nao interpreta, para valores assim utilizar if let para verificacao do valor (como foi feito)
 // retorna dados
