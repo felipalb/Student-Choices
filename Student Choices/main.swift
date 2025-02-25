@@ -16,11 +16,13 @@ var auth = false
 var Age : Int = 0
 var University : String = ""
 // declarei variavel vazia para guardar valor de input
+var Life : String = "* * * * *"
 // nome, genero, idade, universidade
 while NameStudent.isEmpty{
 // continua executando enquanto o nome for uma string vazia
     print("Insira o nome: \n")
         if let input = readLine(), !input.isEmpty {
+            // if para ler a linha (readLine), guardando dentro da var
             // verifica se a entrada não está vazia
             NameStudent = input
             print("Olá, \(NameStudent)")
@@ -63,15 +65,26 @@ if let input = readLine(), let choice = Int(input) {
 if Gender == "Outro" {
     Gender = "Neutro"
 }
+
 // chamo uma variavel provisoria para receber o valor de gender
 if let SelectedGen = Gender {
-    print("voce é do genero: \(SelectedGen)\n")
+    print("você é do genero: \(SelectedGen)\n")
 }
-// if para ler a linha (readLine), guardando dentro da var
-// retorna depois olá + nome do aluno "\(variavelNome)"
+// retorna genero
+
+while Age <= 0 {
+    print ("Qual é a sua Idade?")
+    if let input = readLine(), !input.isEmpty, let idade = Int(input){
+        if idade < 16 {
+            print("tem certeza de que você é um universitário?!")
+        }else{
+            Age = idade
+            
+        }
+    }
+    else{print("Valor invalido")}
+}
 
 
 
-
-
-
+print("sua idade é: \(Age)")
