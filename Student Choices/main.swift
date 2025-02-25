@@ -12,7 +12,7 @@ var NameStudent : String = ""
 var Gender : String? = nil
 // declaro como string opcional armazena entrada tipo string e tipo nil
 var auth = false
-// variavel de autenticacao do loop
+// variavel de autenticacao do loops
 var Age : Int = 0
 var University : String = ""
 // declarei variavel vazia para guardar valor de input
