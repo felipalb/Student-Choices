@@ -99,7 +99,11 @@ if let SelectedGen = Gender {
 print("Os dados do seu personagem são: \n nome: \(NameStudent);\n Idade: \(Age);\n Genero: \(SelectedGen);\n Universidade: \(University).")
 }
 
+Thread.sleep(forTimeInterval: 30)
+// pausa execucao por 30s
 print("  **************\nRealizando Matricula...\n  **************")
+Thread.sleep(forTimeInterval: 30)
+// pausa execucao por 30s
 print("Matricula Realizada!!\n  **************")
 // gender está com ! pois é um valor nil, o swift nao interpreta, para valores assim utilizar if let para verificacao do valor (como foi feito)
 // retorna dados
