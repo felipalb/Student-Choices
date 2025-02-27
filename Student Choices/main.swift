@@ -16,7 +16,7 @@ var auth = false
 var Age : Int = 0
 var University : String = ""
 // declarei variavel vazia para guardar valor de input
-var Life : String = "* * * * *"
+var Life : String = "5"
 // nome, genero, idade, universidade
 while NameStudent.isEmpty{
 // continua executando enquanto o nome for uma string vazia
@@ -57,7 +57,7 @@ if let input = readLine(), let choice = Int(input) {
 }
     // verifico se o valor da entrada é numero int ou não default
     else {
-        print("Insira um valor válido.")
+        print("Insira os numerais 1,2 ou 3 referente ao genero desejado.")
     }
 }
 
@@ -66,6 +66,19 @@ if Gender == "Outro" {
     Gender = "Neutro"
 }
 
+var pronums : String = ""
+if let gen = Gender {
+    if gen == "Neutro"{
+        pronums = "e"
+    }
+    else if gen == "Masculino"{
+        pronums = "o"
+    }
+    else if gen == "Feminino"{
+        pronums = "a"
+    }
+}
+// if para verificacao e definicao dos pronomes a partir do genero do personagem
 
 while Age <= 0 {
     print ("Qual é a sua Idade?")
@@ -79,7 +92,7 @@ while Age <= 0 {
         // adiciona para a variavel, o valor da variavel temp.
         }
     }
-    else{print("Valor invalido")}
+    else{print("Insira um valor de forma numérica para a idade d\(pronums) \(NameStudent).")}
 }
 
 while University.isEmpty{
@@ -99,11 +112,17 @@ if let SelectedGen = Gender {
 print("Os dados do seu personagem são: \n nome: \(NameStudent);\n Idade: \(Age);\n Genero: \(SelectedGen);\n Universidade: \(University).")
 }
 
-Thread.sleep(forTimeInterval: 30)
-// pausa execucao por 30s
+Thread.sleep(forTimeInterval: 8)
+// pausa execucao por 8s
 print("  **************\nRealizando Matricula...\n  **************")
-Thread.sleep(forTimeInterval: 30)
-// pausa execucao por 30s
+Thread.sleep(forTimeInterval: 5)
+// pausa execucao por 5s
 print("Matricula Realizada!!\n  **************")
 // gender está com ! pois é um valor nil, o swift nao interpreta, para valores assim utilizar if let para verificacao do valor (como foi feito)
 // retorna dados
+
+
+Thread.sleep(forTimeInterval: 5)
+print("A primeira semana de aula se inicia, e o grande desafio d\(pronums) \(NameStudent) é sobreviver aos trotes. Daqui pra frente voce terá que decidir como será tal tragetória, definir qual tipo de aluno quer se tornar e consequentemente quais notas tirar. Cada decisao pode impactar positivamente ou negativamente no seu foco (que será sempre atualizado ao final de cada semana).")
+Thread.sleep(forTimeInterval: 5)
+
