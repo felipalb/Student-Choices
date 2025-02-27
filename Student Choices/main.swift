@@ -16,22 +16,37 @@ var auth = false
 // variavel de autenticacao do loops
 var Age : Int = 0
 var University : String = ""
-// declarei variavel vazia para guardar valor de input
+// declarei variavel para vida iniciando em 5
 var Life : Int = 5
-// definindo funcao para perca de vida
+var Choices : String = ""
+
+// definindo funcao para funcionamento perca de vida
 func Lostlife() -> Int {
     //faço valor de Life -1
     Life -= 1
-    return Life
+    print("Você perdeu um ponto de foco, seu foco restante é: \(Life)")
     // retorno Life
+    return Life
 }
 
-// definindo funcao para ganho de vida
+// definindo funcao para funcionamento ganho de vida
 func LifeGain() -> Int {
     //faço valor de Life +1
     Life += 1
     return Life
     // retorno Life
+}
+
+// -> (retorno) int = tipo de retorno que dara
+// como essa funcao nao retorna nada apenas printa não é necessario ->
+// criacao de funcao para o final do jogo por morte sem vidas
+func EndGame(){
+    if Life == 0{
+        print("""
+            Você falhou!
+            Suas escolhas te dão maior chance de não conseguir ser aprovado no semestre.
+            """)
+    }
 }
 
 // recepcao nome personagem e validacao
@@ -148,4 +163,25 @@ Cada decisão pode impactar positivamente ou negativamente no seu foco (que ser�
 """)
 // """ para multi line string
 Thread.sleep(forTimeInterval: 4)
+print("  **************\n \n  **************")
+print("\(NameStudent) chega na maior impolgação, e se depara com a dificil escolha: \n1. Sair para beber com os calouros \n2. Participar da aula de fisica mega legal \n3. Ver a aula e depois sair para beber")
+print("SEU FOCO: \(Life)")
+// ouve a entrada, cria "choice" que vai receber um Int (1,2,3)
+if let input = readLine(), let choice = Int(input){
+    switch choice{
+        case 1:
+            Choices = "Negativo"
+        case 2:
+            Choices = "Positivo"
+        case 3:
+            Choices = "Neutro"
+    default:
+        print("teste")
+        
+    }
+}
+
+if Choices == "Negativo"{
+    Lostlife()
+}
 
