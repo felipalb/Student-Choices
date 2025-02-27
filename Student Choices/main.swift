@@ -13,6 +13,7 @@ var NameStudent : String = ""
 var Gender : String? = nil
 // declaro como string opcional armazena entrada tipo string e tipo nil
 var auth = false
+var auth2 = false
 // variavel de autenticacao do loops
 var Age : Int = 0
 var University : String = ""
@@ -159,31 +160,55 @@ print("""
 A primeira semana de aula se inicia, e o grande desafio d\(pronums) \(NameStudent) é sobreviver aos trotes.
 Daqui pra frente você terá que decidir como será tal tragetória,
 definir qual tipo de aluno quer se tornar e consequentemente quais notas tirar.
-Cada decisão pode impactar positivamente ou negativamente no seu foco (que será sempre atualizado ao final de cada semana).
+Cada decisão pode impactar positivamente ou negativamente no seu foco
+(que será sempre atualizado ao final de cada semana).
 """)
 // """ para multi line string
 Thread.sleep(forTimeInterval: 4)
 print("  **************\n \n  **************")
 print("\(NameStudent) chega na maior impolgação, e se depara com a dificil escolha: \n1. Sair para beber com os calouros \n2. Participar da aula de fisica mega legal \n3. Ver a aula e depois sair para beber")
 print("SEU FOCO: \(Life)")
-// ouve a entrada, cria "choice" que vai receber um Int (1,2,3)
-if let input = readLine(), let choice = Int(input){
-    switch choice{
+
+/*func doingchoices (){
+    if let input = readLine(), let choice = Int(input){
+        switch choice{
         case 1:
             Choices = "Negativo"
         case 2:
             Choices = "Positivo"
         case 3:
             Choices = "Neutro"
-    default:
-        print("teste")
-        
+        default:
+            print("teste2")
+        }
     }
-}else{
-    print("Insira os numerais 1,2 ou 3 referente a alternativa desejada")
-}
+}*/
 
+
+// ouve a entrada, cria "choice" que vai receber um Int (1,2,3)
+while !auth2{
+    if let input = readLine(), let choice = Int(input){
+        switch choice{
+            case 1:
+                Choices = "Negativo"
+                auth2 = true
+            case 2:
+                Choices = "Positivo"
+                auth2 = true
+            case 3:
+                Choices = "Neutro"
+                auth2 = true
+        default:
+            print("Insira os numerais 1,2 ou 3 referente a alternativa desejada")
+            
+        }
+    }else{
+        print("Insira os numerais 1,2 ou 3 referente a alternativa desejada")
+    }
+
+}
 if Choices == "Negativo"{
     Lostlife()
 }
 
+// ideias: criar uma func para choices perca e ganho, chama-las direto no switch case poupando processamento.
