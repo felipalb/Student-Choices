@@ -21,12 +21,12 @@ var Life : Int = 5
 var Choices : String = ""
 
 // definindo funcao para funcionamento perca de vida
-func Lostlife() -> Int {
+func Lostlife(){
+// nao tem -> pois nao necessariamente quero que ele retorne um int ou string, apenas um print
     //faço valor de Life -1
     Life -= 1
     print("Você perdeu um ponto de foco, seu foco restante é: \(Life)")
     // retorno Life
-    return Life
 }
 
 // definindo funcao para funcionamento ganho de vida
@@ -53,10 +53,10 @@ func EndGame(){
 while NameStudent.isEmpty{
 // continua executando enquanto o nome for uma string vazia
     print("Insira o nome: \n")
-        if let input = readLine(), !input.isEmpty {
+    if let input = readLine(), !input.isEmpty{
             // if para ler a linha (readLine), guardando dentro da var
             // verifica se a entrada não está vazia
-            NameStudent = input
+            NameStudent = String(input)
             print("Olá, \(NameStudent)")
         }
     else{
@@ -179,6 +179,8 @@ if let input = readLine(), let choice = Int(input){
         print("teste")
         
     }
+}else{
+    print("Insira os numerais 1,2 ou 3 referente a alternativa desejada")
 }
 
 if Choices == "Negativo"{
