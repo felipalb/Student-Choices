@@ -58,6 +58,10 @@ func VerifyChoices (){
     else if Life < 5, Choices == "Positivo" {
         LifeGain()
     }
+    // verifica vidas, quando zera chama EndGame
+    else if Life == 0{
+        EndGame()
+    }
 }
 
 
@@ -68,9 +72,19 @@ while NameStudent.isEmpty{
     if let input = readLine(), !input.isEmpty{
             // if para ler a linha (readLine), guardando dentro da var
             // verifica se a entrada não está vazia
-            NameStudent = String(input)
+        // cria containNumbers para pegar a entrada e analisar se tem algum numero
+        let ContainNumbers = input.contains{$0.isNumber}
+        // se nao contiver numeros salva e printa ola nome
+        if !ContainNumbers{
+            NameStudent = input
             print("Olá, \(NameStudent)")
+        }else{
+            // se tiver numeros printa erro
+            print("O nome não pode conter numeros. informe um nome válido")
         }
+
+        }
+    // se nao tiver nada printa para informar
     else{
         print("informe um nome para seu personagem")
     }
@@ -182,22 +196,31 @@ print("SEU FOCO: \(Life)")
 
 // definindo uma funcao de algo repetitivo que faz a classificacao e validacao dos dados coletados a partir das respostas
 func doingchoices (){
-    if let input = readLine(), let choice = Int(input){
-        switch choice{
-        case 1:
-            Choices = "Negativo"
-        case 2:
-            Choices = "Positivo"
-        case 3:
-            Choices = "Neutro"
-        default:
+    // sempre que iniciar a func auth2 = false, para existir a validacao
+    auth2 = false
+    while !auth2{
+        if let input = readLine(), let choice = Int(input){
+            switch choice{
+            case 1:
+                Choices = "Negativo"
+                auth2 = true
+            case 2:
+                Choices = "Positivo"
+                auth2 = true
+            case 3:
+                Choices = "Neutro"
+                auth2 = true
+            default:
+                print("Insira os numerais 1,2 ou 3 referente a alternativa desejada")
+            }
+        }else{
             print("Insira os numerais 1,2 ou 3 referente a alternativa desejada")
         }
-    }
 }
-
-
+}
+auth2 = false
 // ouve a entrada, cria "choice" que vai receber um Int (1,2,3)
+// enquanto auth2 nao for true
 while !auth2{
     if let input = readLine(), let choice = Int(input){
         switch choice{
@@ -225,7 +248,7 @@ Thread.sleep(forTimeInterval: 4)
 print("""
 \(NameStudent) durante a semana faz muit\(pronums)s amig\(pronums)s,
 que te chamam para cada rolê universitario de começo de semestre,
-\(NameStudent) decide: \n1. Ir para as festas e curtir o máximo \n2. Ir para a aula, descansar e aproveitar para revisar o conteudo \n3. Ir para a aula, e tentar fazer novas amizades saindo para barzinho no final do dia
+\(NameStudent) decide: \n1. Ir para as festas e curtir o máximo \n2. Ir para a aula, descansar e aproveitar para revisar o conteúdo \n3. Ir para a aula, e tentar fazer novas amizades saindo para barzinho no final do dia
 """)
 print("SEU FOCO: \(Life)")
 doingchoices()
@@ -233,13 +256,9 @@ VerifyChoices()
 Thread.sleep(forTimeInterval: 4)
 print("""
 \(NameStudent) está morando nos arredores da \(University),
-sendo que foi combinado com que todos os finais de semana ele iria para casa de seus pais,
-porém fica na maior indecisão: \n1. Ir para festas pois a noite é uma criança \n2. Ir para casa dos seus pais passar o final de semana se alimentando igual um ser humano de verdade \n3. Almoçar com alguns amig\(pronums)s e no final da tarde ir para a casa dos pais
+sendo que foi combinado com que todos os finais de semana iria para casa de seus pais,
+porém fica na maior indecisão: \n1. Ir para festas pois a noite é uma criança \n2. Ir para casa dos seus pais, passar o final de semana se alimentando bem \n3. Almoçar com alguns amig\(pronums)s e no final da tarde ir para a casa dos pais
 """)
 print("SEU FOCO: \(Life)")
 doingchoices()
 VerifyChoices()
-
-
-
-// ideias: criar uma func para choices perca e ganho, chama-las direto no switch case poupando processamento.
