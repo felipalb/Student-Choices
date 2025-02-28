@@ -74,7 +74,7 @@ while NameStudent.isEmpty{
             // verifica se a entrada não está vazia
         // cria containNumbers para pegar a entrada e analisar se tem algum numero
         let ContainNumbers = input.contains{$0.isNumber}
-        // se nao contiver numeros salva e printa ola nome
+        // se nao tiver numeros salva e printa ola nome
         if !ContainNumbers{
             NameStudent = input
             print("Olá, \(NameStudent)")

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A7E8677C2D6CA38600CC7E77 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8677B2D6CA38600CC7E77 /* main.swift */; };
+		A7E867842D7201D900CC7E77 /* Prism in Frameworks */ = {isa = PBXBuildFile; productRef = A7E867832D7201D900CC7E77 /* Prism */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7E867842D7201D900CC7E77 /* Prism in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +80,9 @@
 			dependencies = (
 			);
 			name = "Student Choices";
+			packageProductDependencies = (
+				A7E867832D7201D900CC7E77 /* Prism */,
+			);
 			productName = "Student Choices";
 			productReference = A7E867782D6CA38600CC7E77 /* Student Choices */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +111,9 @@
 				Base,
 			);
 			mainGroup = A7E8676F2D6CA38600CC7E77;
+			packageReferences = (
+				A7E867822D7201D900CC7E77 /* XCRemoteSwiftPackageReference "Prism" */,
+			);
 			productRefGroup = A7E867792D6CA38600CC7E77 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -282,6 +290,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A7E867822D7201D900CC7E77 /* XCRemoteSwiftPackageReference "Prism" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jordanbaird/Prism";
+			requirement = {
+				kind = exactVersion;
+				version = 0.0.9;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A7E867832D7201D900CC7E77 /* Prism */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A7E867822D7201D900CC7E77 /* XCRemoteSwiftPackageReference "Prism" */;
+			productName = Prism;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A7E867702D6CA38600CC7E77 /* Project object */;
 }
