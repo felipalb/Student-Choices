@@ -31,10 +31,10 @@ func Lostlife(){
 }
 
 // definindo funcao para funcionamento ganho de vida
-func LifeGain() -> Int {
+func LifeGain() {
     //faço valor de Life +1
     Life += 1
-    return Life
+    print("Você ganhou um ponto de foco, seu foco agora é: \(Life)")
     // retorno Life
 }
 
@@ -49,6 +49,17 @@ func EndGame(){
             """)
     }
 }
+
+// funcao que executa a verificacao de suas escolhas, e a partir disso verifica se ganha ou perde "vidas"
+func VerifyChoices (){
+    if Choices == "Negativo"{
+        Lostlife()
+    }
+    else if Life < 5, Choices == "Positivo" {
+        LifeGain()
+    }
+}
+
 
 // recepcao nome personagem e validacao
 while NameStudent.isEmpty{
@@ -142,11 +153,11 @@ while University.isEmpty{
     }
 }
 if let SelectedGen = Gender {
-print("Os dados do seu personagem são: \n nome: \(NameStudent);\n Idade: \(Age);\n Genero: \(SelectedGen);\n Universidade: \(University).")
+print("Os dados do seu personagem são: \n Nome: \(NameStudent);\n Idade: \(Age);\n Gênero: \(SelectedGen);\n Universidade: \(University).")
 }
 
-Thread.sleep(forTimeInterval: 8)
-// pausa execucao por 8s
+Thread.sleep(forTimeInterval: 6)
+// pausa execucao por 6s
 print("  **************\nRealizando Matricula...\n  **************")
 Thread.sleep(forTimeInterval: 4)
 // pausa execucao por 5s
@@ -159,9 +170,9 @@ Thread.sleep(forTimeInterval: 4)
 print("""
 A primeira semana de aula se inicia, e o grande desafio d\(pronums) \(NameStudent) é sobreviver aos trotes.
 Daqui pra frente você terá que decidir como será tal tragetória,
-definir qual tipo de aluno quer se tornar e consequentemente quais notas tirar.
+definir qual tipo de alun\(pronums) quer se tornar e consequentemente quais notas tirar.
 Cada decisão pode impactar positivamente ou negativamente no seu foco
-(que será sempre atualizado ao final de cada semana).
+(que será sempre atualizado ao tomar uma decisão).
 """)
 // """ para multi line string
 Thread.sleep(forTimeInterval: 4)
@@ -169,7 +180,8 @@ print("  **************\n \n  **************")
 print("\(NameStudent) chega na maior impolgação, e se depara com a dificil escolha: \n1. Sair para beber com os calouros \n2. Participar da aula de fisica mega legal \n3. Ver a aula e depois sair para beber")
 print("SEU FOCO: \(Life)")
 
-/*func doingchoices (){
+// definindo uma funcao de algo repetitivo que faz a classificacao e validacao dos dados coletados a partir das respostas
+func doingchoices (){
     if let input = readLine(), let choice = Int(input){
         switch choice{
         case 1:
@@ -179,10 +191,10 @@ print("SEU FOCO: \(Life)")
         case 3:
             Choices = "Neutro"
         default:
-            print("teste2")
+            print("Insira os numerais 1,2 ou 3 referente a alternativa desejada")
         }
     }
-}*/
+}
 
 
 // ouve a entrada, cria "choice" que vai receber um Int (1,2,3)
@@ -207,8 +219,27 @@ while !auth2{
     }
 
 }
-if Choices == "Negativo"{
-    Lostlife()
-}
+VerifyChoices()
+
+Thread.sleep(forTimeInterval: 4)
+print("""
+\(NameStudent) durante a semana faz muit\(pronums)s amig\(pronums)s,
+que te chamam para cada rolê universitario de começo de semestre,
+\(NameStudent) decide: \n1. Ir para as festas e curtir o máximo \n2. Ir para a aula, descansar e aproveitar para revisar o conteudo \n3. Ir para a aula, e tentar fazer novas amizades saindo para barzinho no final do dia
+""")
+print("SEU FOCO: \(Life)")
+doingchoices()
+VerifyChoices()
+Thread.sleep(forTimeInterval: 4)
+print("""
+\(NameStudent) está morando nos arredores da \(University),
+sendo que foi combinado com que todos os finais de semana ele iria para casa de seus pais,
+porém fica na maior indecisão: \n1. Ir para festas pois a noite é uma criança \n2. Ir para casa dos seus pais passar o final de semana se alimentando igual um ser humano de verdade \n3. Almoçar com alguns amig\(pronums)s e no final da tarde ir para a casa dos pais
+""")
+print("SEU FOCO: \(Life)")
+doingchoices()
+VerifyChoices()
+
+
 
 // ideias: criar uma func para choices perca e ganho, chama-las direto no switch case poupando processamento.
