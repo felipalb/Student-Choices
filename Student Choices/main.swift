@@ -8,7 +8,8 @@
 import Foundation
 import Prism
 
-print(callPrism(texto:"Bem vindo ao Student Choices!! \nCrie seu personagem!", cor:.blue, corTexto:.white))
+print(callPrism(texto:"Bem vindo ao Student Choices!!", cor:.blue, corTexto:.white))
+print("Crie seu personagem!")
 
 // criacao: nome, genero, idade, universidade
 var NameStudent : String = ""
@@ -252,7 +253,7 @@ Cada decisão pode impactar positivamente ou negativamente no seu foco
 
 // """ para multi line string
 Thread.sleep(forTimeInterval: 4)
-print("  **************\n \n  **************")
+print("\n---------------------------------------------------\n")
 print("\(NameStudent) chega na maior impolgação, e se depara com a dificil escolha: \n1. Sair para beber com os calouros \n2. Participar da aula de fisica mega legal \n3. Ver a aula e depois sair para beber")
 print("SEU FOCO: \(Life)")
 
@@ -427,13 +428,13 @@ Thread.sleep(forTimeInterval: 2)
 print("\n---------------------------------------------------\n")
 typewriter("""
 
-Mais uma semana se inicia! Você está aguentando firme, superando cada desafio, e já está ficando expert em equilibrar os estudos com as
+Mais uma semana se inicia! \(NameStudent) está aguentando firme, superando cada desafio, e já está ficando expert em equilibrar os estudos com as
 adversidades. Vamos lá, \(NameStudent), o caminho não é fácil, mas o sucesso está logo ali. Hora de continuar sua jornada!
 
 """)
 print("""
 
-Uma proposta de estágio chegou até você, \(NameStudent)! Esta é a chance de ganhar experiência prática, mas também pode exigir que você se
+Uma proposta de estágio chegou até \(NameStudent)! Esta é a chance de ganhar experiência prática, mas também pode exigir que você se
 dedique mais ao trabalho do que aos estudos. Agora, é hora de tomar uma decisão importante:
 
 1. Aceitar a oportunidade de estágio e ganhar experiência prática, mas arriscar menos tempo para os estudos
@@ -674,8 +675,8 @@ print("""
        
 ---------------------------------------------------
 
-❌ Você falhou!
-Suas escolhas fazem com que reprove no semestre. 😢
+❌ Tome cuidado!
+"Você é livre para fazer escolhas, mas se torna prisineiro de suas consequências..." - Pablo Neruda
 
 ---------------------------------------------------
        
