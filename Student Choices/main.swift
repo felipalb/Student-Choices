@@ -159,8 +159,16 @@ while University.isEmpty{
         if let input = readLine(), !input.isEmpty {
             // if para ler a linha (readLine)
             // verifica se a entrada não está vazia
+            // cria ContainNumbers que ve se a entrada recebe algum numero
+            let ContainNumbers = input.contains{$0.isNumber}
+            // se nao tiver numeros continua codigo
+            if !ContainNumbers{
             University = input
             print("Bem vindo a \(University), \(NameStudent)")
+            }else{
+                // se tiver printa erro
+                print("O nome da universidade não pode conter números. Informe um valor válido.")
+            }
         }
     else{
         print("informe o nome da universidade")
