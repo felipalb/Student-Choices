@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Prism
 
 print ("Bem vindo ao Student Choices!! \nCrie seu personagem!")
 // criacao: nome, genero, idade, universidade
@@ -64,6 +65,40 @@ func VerifyChoices (){
     }
 }
 
+func doingchoices (){
+    // sempre que iniciar a func auth2 = false, para existir a validacao
+    auth2 = false
+    while !auth2{
+        if let input = readLine(), let choice = Int(input){
+            switch choice{
+            case 1:
+                Choices = "Negativo"
+                auth2 = true
+            case 2:
+                Choices = "Positivo"
+                auth2 = true
+            case 3:
+                Choices = "Neutro"
+                auth2 = true
+            default:
+                print("Insira os numerais 1,2 ou 3 referente a alternativa desejada")
+            }
+        }else{
+            print("Insira os numerais 1,2 ou 3 referente a alternativa desejada")
+        }
+}
+}
+
+// funcao para animacao de delay ao printar frase
+func typewriter(_ text: String, delay: UInt32 = 110_000){
+    // defino a funcao para receber String, defino delay de 85 milisegundos
+    for char in text{
+        print(char, terminator: "")
+        fflush(stdout)
+        usleep(delay)
+    }
+    print()
+}
 
 // recepcao nome personagem e validacao
 while NameStudent.isEmpty{
@@ -175,7 +210,7 @@ while University.isEmpty{
     }
 }
 if let SelectedGen = Gender {
-print("Os dados do seu personagem são: \n Nome: \(NameStudent);\n Idade: \(Age);\n Gênero: \(SelectedGen);\n Universidade: \(University).")
+typewriter("Os dados do seu personagem são: \n Nome: \(NameStudent);\n Idade: \(Age);\n Gênero: \(SelectedGen);\n Universidade: \(University).")
 }
 
 Thread.sleep(forTimeInterval: 6)
@@ -189,7 +224,7 @@ print("Matricula Realizada!!\n  **************")
 
 
 Thread.sleep(forTimeInterval: 4)
-print("""
+typewriter("""
 A primeira semana de aula se inicia, e o grande desafio d\(pronums) \(NameStudent) é sobreviver aos trotes.
 Daqui pra frente você terá que decidir como será tal tragetória,
 definir qual tipo de alun\(pronums) quer se tornar e consequentemente quais notas tirar.
@@ -203,29 +238,7 @@ print("\(NameStudent) chega na maior impolgação, e se depara com a dificil esc
 print("SEU FOCO: \(Life)")
 
 // definindo uma funcao de algo repetitivo que faz a classificacao e validacao dos dados coletados a partir das respostas
-func doingchoices (){
-    // sempre que iniciar a func auth2 = false, para existir a validacao
-    auth2 = false
-    while !auth2{
-        if let input = readLine(), let choice = Int(input){
-            switch choice{
-            case 1:
-                Choices = "Negativo"
-                auth2 = true
-            case 2:
-                Choices = "Positivo"
-                auth2 = true
-            case 3:
-                Choices = "Neutro"
-                auth2 = true
-            default:
-                print("Insira os numerais 1,2 ou 3 referente a alternativa desejada")
-            }
-        }else{
-            print("Insira os numerais 1,2 ou 3 referente a alternativa desejada")
-        }
-}
-}
+
 auth2 = false
 // ouve a entrada, cria "choice" que vai receber um Int (1,2,3)
 // enquanto auth2 nao for true
