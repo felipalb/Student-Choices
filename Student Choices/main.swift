@@ -27,7 +27,8 @@ func Lostlife(){
 // nao tem -> pois nao necessariamente quero que ele retorne um int ou string, apenas um print
     //faço valor de Life -1
     Life -= 1
-    print("Você perdeu um ponto de foco, seu foco restante é: \(Life)")
+    print(callPrism(texto:"Você perdeu um ponto de foco, seu foco restante é: \(Life)", cor:.red, corTexto:.white))
+    // chama a funcao callPrism para definir cores
     // retorno Life
 }
 
@@ -35,7 +36,8 @@ func Lostlife(){
 func LifeGain() {
     //faço valor de Life +1
     Life += 1
-    print("Você ganhou um ponto de foco, seu foco agora é: \(Life)")
+    print(callPrism(texto: "Você ganhou um ponto de foco, seu foco agora é: \(Life)", cor:.green, corTexto:.white))
+    // chama a funcao callPrism para definir cores
     // retorno Life
 }
 
@@ -95,7 +97,9 @@ func typewriter(_ text: String, delay: UInt32 = 110_000){
     // defino a funcao para receber String, defino delay de 85 milisegundos
     for char in text{
         print(char, terminator: "")
+        // exibicao do caracter atual em char que recebe o text
         fflush(stdout)
+        // forca limpeza de buffer na saida
         usleep(delay)
     }
     print()
@@ -146,12 +150,12 @@ if let input = readLine(), let choice = Int(input) {
             auth = true
         default:
             // se escolha não for 1,2,3 executa aqui
-            print("Insira os numerais 1,2 ou 3 referente ao genero desejado.")
+            print("Insira os numerais 1,2 ou 3 referente ao gênero desejado.")
     }
 }
     // verifico se o valor da entrada é numero int ou não default
     else {
-        print("Insira os numerais 1,2 ou 3 referente ao genero desejado.")
+        print("Insira os numerais 1,2 ou 3 referente ao gênero desejado.")
     }
 }
 

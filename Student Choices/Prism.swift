@@ -8,7 +8,9 @@
 import Foundation
 import Prism
 
-func callPrism(texto : String, cor: Color, corTexto: Color ) -> Prism{
+// criacao de funcao para cores de texto
+func callPrism(texto: String, cor: Color, corTexto: Color ) -> Prism{
+    // parametros que devo passar ao chamar a funcao
     let text = Prism(spacing: .newlines) {
         Bold{
             BackgroundColor(cor){
