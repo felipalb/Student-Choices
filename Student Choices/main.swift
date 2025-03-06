@@ -54,8 +54,14 @@ func LifeGain() {
 func EndGame(){
     if Life == 0{
         print("""
-            Você falhou!
-            Suas escolhas te dão maior chance de não conseguir ser aprovado no semestre.
+                   
+            ---------------------------------------------------
+
+            ❌ Você falhou!
+            Suas escolhas fazem com que reprove no semestre. 😢
+
+            ---------------------------------------------------
+                   
             """)
     }
 }
@@ -317,17 +323,14 @@ while !auth2{
         switch choice{
             case 1:
                 Choices = "Positivo"
-                Thread.sleep(forTimeInterval: 4)
                 print("Resolveu o problema de forma saudável, melhorando o bem-estar emocional d\(pronums) \(NameStudent), ganhou foco.")
                 auth2 = true
             case 2:
                 Choices = "Negativo"
-                Thread.sleep(forTimeInterval: 4)
                 print("Ignorou os sentimentos e gerou mais frustração e aumentou o estresse, perdeu foco.")
                 auth2 = true
             case 3:
                 Choices = "Negativo"
-                Thread.sleep(forTimeInterval: 4)
                 print("A decisão aliviou \(NameStudent) momentaneamente, mas também gerou arrependimento e perda de conexões importantes, afetando o bem-estar, perdeu foco.")
                 auth2 = true
         default:
@@ -360,17 +363,14 @@ while !auth2{
         switch choice{
             case 1:
                 Choices = "Positivo"
-                Thread.sleep(forTimeInterval: 4)
                 print("Resolveu o problema de forma saudável, melhorando o bem-estar emocional d\(pronums) \(NameStudent), ganhou foco.")
                 auth2 = true
             case 2:
                 Choices = "Negativo"
-                Thread.sleep(forTimeInterval: 4)
                 print("Ignorou os sentimentos e gerou mais frustração e aumentou o estresse, perdeu foco.")
                 auth2 = true
             case 3:
                 Choices = "Positivo"
-                Thread.sleep(forTimeInterval: 4)
                 print("A decisão aliviou \(NameStudent) momentaneamente, mas também gerou arrependimento e perda de conexões importantes, afetando o bem-estar, perdeu foco.")
                 auth2 = true
         default:
@@ -403,17 +403,14 @@ while !auth2{
         switch choice{
             case 1:
                 Choices = "Positivo"
-                Thread.sleep(forTimeInterval: 4)
                 print("Resolveu o problema de forma saudável, melhorando o bem-estar emocional d\(pronums) \(NameStudent), ganhou foco.")
                 auth2 = true
             case 2:
                 Choices = "Neutro"
-                Thread.sleep(forTimeInterval: 4)
                 print("Ignorou os sentimentos e gerou mais frustração e aumentou o estresse, perdeu foco.")
                 auth2 = true
             case 3:
                 Choices = "Negativo"
-                Thread.sleep(forTimeInterval: 4)
                 print("A decisão aliviou \(NameStudent) momentaneamente, mas também gerou arrependimento e perda de conexões importantes, afetando o bem-estar, perdeu foco.")
                 auth2 = true
         default:
@@ -453,17 +450,14 @@ while !auth2{
         switch choice{
             case 1:
                 Choices = "Neutro"
-                Thread.sleep(forTimeInterval: 4)
                 print("Resolveu o problema de forma saudável, melhorando o bem-estar emocional d\(pronums) \(NameStudent), ganhou foco.")
                 auth2 = true
             case 2:
                 Choices = "Positivo"
-                Thread.sleep(forTimeInterval: 4)
                 print("Ignorou os sentimentos e gerou mais frustração e aumentou o estresse, perdeu foco.")
                 auth2 = true
             case 3:
                 Choices = "Positivo"
-                Thread.sleep(forTimeInterval: 4)
                 print("A decisão aliviou \(NameStudent) momentaneamente, mas também gerou arrependimento e perda de conexões importantes, afetando o bem-estar, perdeu foco.")
                 auth2 = true
         default:
@@ -497,17 +491,14 @@ while !auth2{
         switch choice{
             case 1:
                 Choices = "Positivo"
-                Thread.sleep(forTimeInterval: 4)
                 print("Resolveu o problema de forma saudável, melhorando o bem-estar emocional d\(pronums) \(NameStudent), ganhou foco.")
                 auth2 = true
             case 2:
                 Choices = "Neutro"
-                Thread.sleep(forTimeInterval: 4)
                 print("Ignorou os sentimentos e gerou mais frustração e aumentou o estresse, perdeu foco.")
                 auth2 = true
             case 3:
                 Choices = "Positivo"
-                Thread.sleep(forTimeInterval: 4)
                 print("A decisão aliviou \(NameStudent) momentaneamente, mas também gerou arrependimento e perda de conexões importantes, afetando o bem-estar, perdeu foco.")
                 auth2 = true
         default:
@@ -550,17 +541,14 @@ while !auth2{
         switch choice{
             case 1:
                 Choices = "Negativo"
-                Thread.sleep(forTimeInterval: 4)
                 print("Resolveu o problema de forma saudável, melhorando o bem-estar emocional d\(pronums) \(NameStudent), ganhou foco.")
                 auth2 = true
             case 2:
                 Choices = "Positivo"
-                Thread.sleep(forTimeInterval: 4)
                 print("Ignorou os sentimentos e gerou mais frustração e aumentou o estresse, perdeu foco.")
                 auth2 = true
             case 3:
                 Choices = "Neutro"
-                Thread.sleep(forTimeInterval: 4)
                 print("A decisão aliviou \(NameStudent) momentaneamente, mas também gerou arrependimento e perda de conexões importantes, afetando o bem-estar, perdeu foco.")
                 auth2 = true
         default:
