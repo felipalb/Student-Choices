@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A7E8677C2D6CA38600CC7E77 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8677B2D6CA38600CC7E77 /* main.swift */; };
 		A7E867842D7201D900CC7E77 /* Prism in Frameworks */ = {isa = PBXBuildFile; productRef = A7E867832D7201D900CC7E77 /* Prism */; };
+		A7E867862D79DECE00CC7E77 /* Prism.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E867852D79DECE00CC7E77 /* Prism.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		A7E867782D6CA38600CC7E77 /* Student Choices */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Student Choices"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7E8677B2D6CA38600CC7E77 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		A7E867852D79DECE00CC7E77 /* Prism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prism.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				A7E8677B2D6CA38600CC7E77 /* main.swift */,
+				A7E867852D79DECE00CC7E77 /* Prism.swift */,
 			);
 			path = "Student Choices";
 			sourceTree = "<group>";
@@ -129,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7E8677C2D6CA38600CC7E77 /* main.swift in Sources */,
+				A7E867862D79DECE00CC7E77 /* Prism.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

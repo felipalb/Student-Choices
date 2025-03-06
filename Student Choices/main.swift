@@ -65,6 +65,7 @@ func VerifyChoices (){
     }
 }
 
+// definindo uma funcao de algo repetitivo que faz a classificacao e validacao dos dados coletados a partir das respostas
 func doingchoices (){
     // sempre que iniciar a func auth2 = false, para existir a validacao
     auth2 = false
@@ -210,7 +211,7 @@ while University.isEmpty{
     }
 }
 if let SelectedGen = Gender {
-typewriter("Os dados do seu personagem são: \n Nome: \(NameStudent);\n Idade: \(Age);\n Gênero: \(SelectedGen);\n Universidade: \(University).")
+print("Os dados do seu personagem são: \n Nome: \(NameStudent);\n Idade: \(Age);\n Gênero: \(SelectedGen);\n Universidade: \(University).")
 }
 
 Thread.sleep(forTimeInterval: 6)
@@ -219,7 +220,6 @@ print("  **************\nRealizando Matricula...\n  **************")
 Thread.sleep(forTimeInterval: 4)
 // pausa execucao por 5s
 print("Matricula Realizada!!\n  **************")
-// gender está com ! pois é um valor nil, o swift nao interpreta, para valores assim utilizar if let para verificacao do valor (como foi feito)
 // retorna dados
 
 
@@ -236,8 +236,6 @@ Thread.sleep(forTimeInterval: 4)
 print("  **************\n \n  **************")
 print("\(NameStudent) chega na maior impolgação, e se depara com a dificil escolha: \n1. Sair para beber com os calouros \n2. Participar da aula de fisica mega legal \n3. Ver a aula e depois sair para beber")
 print("SEU FOCO: \(Life)")
-
-// definindo uma funcao de algo repetitivo que faz a classificacao e validacao dos dados coletados a partir das respostas
 
 auth2 = false
 // ouve a entrada, cria "choice" que vai receber um Int (1,2,3)
