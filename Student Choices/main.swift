@@ -76,7 +76,13 @@ func VerifyChoices (){
         LifeGain()
     }
     // verifica vidas, quando zera chama EndGame
-    else if Life == 0{
+    else if Life <= 0{
+        EndGame()
+    }
+}
+
+func VerifyLife (){
+    if Life == 0{
         EndGame()
     }
 }
@@ -316,7 +322,6 @@ equilíbrio entre estudos e vida social.
 
 """)
 print("SEU FOCO: \(Life)")
-auth2 = false
 
 auth2 = false
 while !auth2{
@@ -343,6 +348,7 @@ while !auth2{
 }
 
 VerifyChoices()
+VerifyLife ()
 
 Thread.sleep(forTimeInterval: 2)
 print("\n---------------------------------------------------\n")
@@ -383,6 +389,7 @@ while !auth2{
 }
 
 VerifyChoices()
+VerifyLife ()
 
 Thread.sleep(forTimeInterval: 2)
 print("\n---------------------------------------------------\n")
@@ -423,6 +430,7 @@ while !auth2{
 }
 
 VerifyChoices()
+VerifyLife ()
 
 Thread.sleep(forTimeInterval: 2)
 print("\n---------------------------------------------------\n")
@@ -470,6 +478,7 @@ while !auth2{
 }
 
 VerifyChoices()
+VerifyLife ()
 
 Thread.sleep(forTimeInterval: 2)
 print("\n---------------------------------------------------\n")
@@ -511,6 +520,7 @@ while !auth2{
 }
 
 VerifyChoices()
+VerifyLife ()
 
 print("\n---------------------------------------------------\n")
 Thread.sleep(forTimeInterval: 2)
@@ -561,6 +571,8 @@ while !auth2{
 }
 
 VerifyChoices()
+VerifyLife ()
+
 print("\n---------------------------------------------------\n")
 Thread.sleep(forTimeInterval: 2)
 
@@ -592,6 +604,7 @@ if let input = readLine(), let x = Int(input){
     print("Valor inválido,digite 1 ou 2 para responder")
 }
 VerifyChoices()
+VerifyLife ()
 
 print("\n---------------------------------------------------\n")
 Thread.sleep(forTimeInterval: 2)
@@ -624,7 +637,7 @@ if let input = readLine(), let x = Int(input){
  }
 }
 VerifyChoices()
-
+VerifyLife ()
 
 if  Answer1 == "estudar"{    // final bom
     print("""
@@ -669,7 +682,8 @@ if let input = readLine(), let y = Int(input){
     print("Valor inválido, digite 1 ou 2 para responder")
     }
 VerifyChoices()
-
+VerifyLife ()
+    
 if Answer2 == "sair"{
 print("""
        
