@@ -114,8 +114,7 @@ func doingchoices (){
 }
 
 // funcao para animacao de delay ao printar frase
-func typewriter(_ text: String, delay: UInt32 = 110_000){
-    // defino a funcao para receber String, defino delay de 85 milisegundos
+func typewriter(_ text: String, delay: UInt32 = 108_000){
     for char in text{
         print(char, terminator: "")
         // exibicao do caracter atual em char que recebe o text
@@ -264,7 +263,7 @@ Cada decisão pode impactar positivamente ou negativamente no seu foco
 Thread.sleep(forTimeInterval: 4)
 print("\n---------------------------------------------------\n")
 print("\(NameStudent) chega na maior impolgação, e se depara com a dificil escolha: \n1. Sair para beber com os calouros \n2. Participar da aula de fisica mega legal \n3. Ver a aula e depois sair para beber")
-print("SEU FOCO: \(Life)")
+print(callPrism(texto: "SEU FOCO: \(Life)", cor: .yellow, corTexto: .white))
 
 auth2 = false
 // ouve a entrada, cria "choice" que vai receber um Int (1,2,3)
@@ -298,7 +297,7 @@ print("""
 que te chamam para cada rolê universitario de começo de semestre,
 \(NameStudent) decide: \n1. Ir para as festas e curtir o máximo \n2. Ir para a aula, descansar e aproveitar para revisar o conteúdo \n3. Ir para a aula, e tentar fazer novas amizades saindo para barzinho no final do dia
 """)
-print("SEU FOCO: \(Life)")
+print(callPrism(texto: "SEU FOCO: \(Life)", cor: .yellow, corTexto: .white))
 doingchoices()
 VerifyChoices()
 Thread.sleep(forTimeInterval: 4)
@@ -307,7 +306,7 @@ print("""
 sendo que foi combinado com que todos os finais de semana iria para casa de seus pais,
 porém fica na maior indecisão: \n1. Ir para festas pois a noite é uma criança \n2. Ir para casa dos seus pais, passar o final de semana se alimentando bem \n3. Almoçar com alguns amig\(pronums)s e no final da tarde ir para a casa dos pais
 """)
-print("SEU FOCO: \(Life)")
+print(callPrism(texto: "SEU FOCO: \(Life)", cor: .yellow, corTexto: .white))
 doingchoices()
 VerifyChoices()
 
@@ -326,8 +325,7 @@ print("""
 2. Ir para a festa da faculdade
 3. Estudar exageradamente no fim de semana para poder curtir a festa
 """)
-print("SEU FOCO: \(Life)")
-
+print(callPrism(texto: "SEU FOCO: \(Life)", cor: .yellow, corTexto: .white))
 auth2 = false
 while !auth2{
     if let input = readLine(), let choice = Int(input){
@@ -364,7 +362,7 @@ parece ter sumido. Agora, é preciso tomar uma decisão difícil para lidar com 
 3. Conversar com amig\(pronums) ou professor para buscar apoio e conselhos
 
 """)
-print("SEU FOCO: \(Life)")
+print(callPrism(texto: "SEU FOCO: \(Life)", cor: .yellow, corTexto: .white))
 
 auth2 = false
 while !auth2{
@@ -402,7 +400,7 @@ seu foco e a pressão aumenta. Agora, é hora de tomar uma decisão difícil sob
 3. Terminar a amizade ou relacionamento para focar 100% em seus objetivos acadêmicos
 
 """)
-print("SEU FOCO: \(Life)")
+print(callPrism(texto: "SEU FOCO: \(Life)", cor: .yellow, corTexto: .white))
 
 auth2 = false
 while !auth2{
@@ -446,7 +444,7 @@ dedique mais ao trabalho do que aos estudos. Agora, é hora de tomar uma decisã
 3. Pedir um tempo para pensar, tentando equilibrar estágio e estudos de forma sábia
 
 """)
-print("SEU FOCO: \(Life)")
+print(callPrism(texto: "SEU FOCO: \(Life)", cor: .yellow, corTexto: .white))
 
 
 auth2 = false
@@ -485,7 +483,7 @@ decidir como agir:
 3. Participar da competição, mas com o objetivo de aprender e se divertir, sem pressão para vencer
 
 """)
-print("SEU FOCO: \(Life)")
+print(callPrism(texto: "SEU FOCO: \(Life)", cor: .yellow, corTexto: .white))
 auth2 = false
 
 auth2 = false
@@ -533,7 +531,7 @@ O problema é que \(NameStudent) se sente um pouco insegur\(pronums), e agora pr
 3. Fazer uma pausa e sair para dar uma caminhada, tentando aliviar a ansiedade antes da prova
 
 """)
-print("SEU FOCO: \(Life)")
+print(callPrism(texto: "SEU FOCO: \(Life)", cor: .yellow, corTexto: .white))
 
 
 auth2 = false
@@ -578,7 +576,7 @@ print("""
       2. Decide vencer a timidez e puxar assunto com alguém
       
 """)
-print("SEU FOCO: \(Life)")
+print(callPrism(texto: "SEU FOCO: \(Life)", cor: .yellow, corTexto: .white))
 authquestion = false
 if let input = readLine(), let x = Int(input){
       switch x {
@@ -611,7 +609,7 @@ Pense com extremo cuidado como seguir. Sua p3 será na semana seguinte, \(NameSt
 2. Deixar pra revisar de última hora
 
 """)
-print("SEU FOCO: \(Life)")
+print(callPrism(texto: "SEU FOCO: \(Life)", cor: .yellow, corTexto: .white))
 if let input = readLine(), let x = Int(input){
   switch x {
       case 1:
@@ -661,7 +659,7 @@ viagem bem nessa data, então você:
 2. Ficar e fazer o exame
       
 """)
-print("SEU FOCO: \(Life)")
+print(callPrism(texto: "SEU FOCO: \(Life)", cor: .yellow, corTexto: .white))
 if let input = readLine(), let y = Int(input){
   switch y {
       case 1:
