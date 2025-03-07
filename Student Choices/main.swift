@@ -554,11 +554,11 @@ while !auth2{
     if let input = readLine(), let choice = Int(input){
         switch choice{
             case 1:
-                Choices = "Negativo"
+                Choices = "Positivo"
                 print("Resolveu o problema de forma saudável, melhorando o bem-estar emocional d\(pronums) \(NameStudent), ganhou foco.")
                 auth2 = true
             case 2:
-                Choices = "Positivo"
+                Choices = "Negativo"
                 print("Ignorou os sentimentos e gerou mais frustração e aumentou o estresse, perdeu foco.")
                 auth2 = true
             case 3:
