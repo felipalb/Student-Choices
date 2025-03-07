@@ -332,15 +332,12 @@ while !auth2{
         switch choice{
             case 1:
                 Choices = "Positivo"
-                print("Resolveu o problema de forma saudável, melhorando o bem-estar emocional d\(pronums) \(NameStudent), ganhou foco.")
                 auth2 = true
             case 2:
                 Choices = "Negativo"
-                print("Ignorou os sentimentos e gerou mais frustração e aumentou o estresse, perdeu foco.")
                 auth2 = true
             case 3:
                 Choices = "Negativo"
-                print("A decisão aliviou \(NameStudent) momentaneamente, mas também gerou arrependimento e perda de conexões importantes, afetando o bem-estar, perdeu foco.")
                 auth2 = true
         default:
             print("Opção inválida. Escolha 1, 2 ou 3.")
@@ -373,15 +370,12 @@ while !auth2{
         switch choice{
             case 1:
                 Choices = "Positivo"
-                print("Resolveu o problema de forma saudável, melhorando o bem-estar emocional d\(pronums) \(NameStudent), ganhou foco.")
                 auth2 = true
             case 2:
                 Choices = "Negativo"
-                print("Ignorou os sentimentos e gerou mais frustração e aumentou o estresse, perdeu foco.")
                 auth2 = true
             case 3:
                 Choices = "Positivo"
-                print("A decisão aliviou \(NameStudent) momentaneamente, mas também gerou arrependimento e perda de conexões importantes, afetando o bem-estar, perdeu foco.")
                 auth2 = true
         default:
             print("Opção inválida. Escolha 1, 2 ou 3.")
@@ -414,15 +408,12 @@ while !auth2{
         switch choice{
             case 1:
                 Choices = "Positivo"
-                print("Resolveu o problema de forma saudável, melhorando o bem-estar emocional d\(pronums) \(NameStudent), ganhou foco.")
                 auth2 = true
             case 2:
                 Choices = "Neutro"
-                print("Ignorou os sentimentos e gerou mais frustração e aumentou o estresse, perdeu foco.")
                 auth2 = true
             case 3:
                 Choices = "Negativo"
-                print("A decisão aliviou \(NameStudent) momentaneamente, mas também gerou arrependimento e perda de conexões importantes, afetando o bem-estar, perdeu foco.")
                 auth2 = true
         default:
             print("Opção inválida. Escolha 1, 2 ou 3.")
@@ -462,15 +453,12 @@ while !auth2{
         switch choice{
             case 1:
                 Choices = "Neutro"
-                print("Resolveu o problema de forma saudável, melhorando o bem-estar emocional d\(pronums) \(NameStudent), ganhou foco.")
                 auth2 = true
             case 2:
                 Choices = "Positivo"
-                print("Ignorou os sentimentos e gerou mais frustração e aumentou o estresse, perdeu foco.")
                 auth2 = true
             case 3:
                 Choices = "Positivo"
-                print("A decisão aliviou \(NameStudent) momentaneamente, mas também gerou arrependimento e perda de conexões importantes, afetando o bem-estar, perdeu foco.")
                 auth2 = true
         default:
             print("Opção inválida. Escolha 1, 2 ou 3.")
@@ -504,15 +492,12 @@ while !auth2{
         switch choice{
             case 1:
                 Choices = "Positivo"
-                print("Resolveu o problema de forma saudável, melhorando o bem-estar emocional d\(pronums) \(NameStudent), ganhou foco.")
                 auth2 = true
             case 2:
                 Choices = "Neutro"
-                print("Ignorou os sentimentos e gerou mais frustração e aumentou o estresse, perdeu foco.")
                 auth2 = true
             case 3:
                 Choices = "Positivo"
-                print("A decisão aliviou \(NameStudent) momentaneamente, mas também gerou arrependimento e perda de conexões importantes, afetando o bem-estar, perdeu foco.")
                 auth2 = true
         default:
             print("Opção inválida. Escolha 1, 2 ou 3.")
@@ -555,15 +540,12 @@ while !auth2{
         switch choice{
             case 1:
                 Choices = "Positivo"
-                print("Resolveu o problema de forma saudável, melhorando o bem-estar emocional d\(pronums) \(NameStudent), ganhou foco.")
                 auth2 = true
             case 2:
                 Choices = "Negativo"
-                print("Ignorou os sentimentos e gerou mais frustração e aumentou o estresse, perdeu foco.")
                 auth2 = true
             case 3:
                 Choices = "Neutro"
-                print("A decisão aliviou \(NameStudent) momentaneamente, mas também gerou arrependimento e perda de conexões importantes, afetando o bem-estar, perdeu foco.")
                 auth2 = true
         default:
             print("Opção inválida. Escolha 1, 2 ou 3.")
@@ -579,8 +561,8 @@ VerifyLife ()
 print("\n---------------------------------------------------\n")
 Thread.sleep(forTimeInterval: 2)
 
-while !authquestion {
 authquestion = false
+while !authquestion {
 typewriter("""
 
 A última semana do semestre está começando, e \(NameStudent) percebe que ainda não teve muitas interações com outras pessoas da sala. O tempo
@@ -591,7 +573,7 @@ para criar laços está se esgotando. Nesse momento, ele:
 
 """)
 print("SEU FOCO: \(Life)")
-    
+authquestion = false
 if let input = readLine(), let x = Int(input){
       switch x {
           case 1:
@@ -611,6 +593,7 @@ VerifyLife ()
 
 print("\n---------------------------------------------------\n")
 Thread.sleep(forTimeInterval: 2)
+authQuestion1 = false
 while !authQuestion1 {
 print("""
 
@@ -693,7 +676,7 @@ print("""
 ---------------------------------------------------
 
 ❌ Tome cuidado!
-"Você é livre para fazer escolhas, mas se torna prisineiro de suas consequências..." - Pablo Neruda
+"Você é livre para fazer escolhas, mas se torna prisioneiro de suas consequências..." - Pablo Neruda
 
 ---------------------------------------------------
        
@@ -716,3 +699,7 @@ Mas tenha escolhas melhores no proximo semestre. 😊
   }
  }
 }
+
+
+// colocar ranking com base em tempo e pontuacao JSON
+// escolhas
