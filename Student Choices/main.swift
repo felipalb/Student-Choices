@@ -205,7 +205,9 @@ while Age <= 0 {
         // le o input, verifica se não é nulo, cria a variavel temp. idade int que recebe o input
         if idade < 16 {
         // faz validacao da idade
-            print("tem certeza de que você é um universitário?!")
+            print("Tem certeza de que você é um universitário?!")
+        }else if idade >= 90{
+            print("Idade invalida, insira uma idade realista")
         }else{
             Age = idade
         // adiciona para a variavel, o valor da variavel temp.
