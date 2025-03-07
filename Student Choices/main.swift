@@ -319,10 +319,12 @@ A segunda semana começou! Novos desafios e oportunidades surgem no caminho d\(p
 equilíbrio entre estudos e vida social.
 \(NameStudent) continua sua jornada universitária, e se depara com outra escolha:
 
+""")
+
+print("""
 1. Iniciar projeto de estudos
 2. Ir para a festa da faculdade
 3. Estudar exageradamente no fim de semana para poder curtir a festa
-
 """)
 print("SEU FOCO: \(Life)")
 
@@ -359,7 +361,7 @@ parece ter sumido. Agora, é preciso tomar uma decisão difícil para lidar com 
 
 1. Tirar um dia de descanso para recuperar as energias e voltar com tudo
 2. Ignorar o cansaço e continuar estudando, afinal, não há tempo a perder
-3. Conversar com um amigo ou professor para buscar apoio e conselhos
+3. Conversar com amig\(pronums) ou professor para buscar apoio e conselhos
 
 """)
 print("SEU FOCO: \(Life)")
@@ -396,7 +398,7 @@ print("""
 seu foco e a pressão aumenta. Agora, é hora de tomar uma decisão difícil sobre como lidar com a situação:
 
 1. Tentar resolver a situação conversando e buscando uma solução pacífica
-2. Ignorar o problema e focar somente nos estudos, esperando que tudo se resolva por si mesmo
+2. Ignorar o problema e focar somente nos estudos, esperando que tudo se resolva por si mesm\(pronums)
 3. Terminar a amizade ou relacionamento para focar 100% em seus objetivos acadêmicos
 
 """)
@@ -524,9 +526,9 @@ Thread.sleep(forTimeInterval: 2)
 print("""
 
 \(NameStudent) se encontra diante da tão esperada p2. Essa prova pode determinar seu desempenho no semestre inteiro.
-O problema é que \(NameStudent) se sente um pouco inseguro, e agora precisa decidir como agir:
+O problema é que \(NameStudent) se sente um pouco insegur\(pronums), e agora precisa decidir como agir:
 
-1. Estudar intensamente durante a noite toda para garantir que esteja preparado, mesmo que isso afete o sono
+1. Estudar intensamente durante a noite toda para garantir que esteja preparad\(pronums), mesmo que isso afete o sono
 2. Revisar o conteúdo e descansar, confiando no seu conhecimento e no tempo de estudo já dedicado
 3. Fazer uma pausa e sair para dar uma caminhada, tentando aliviar a ansiedade antes da prova
 
@@ -566,11 +568,15 @@ while !authquestion {
 typewriter("""
 
 A última semana do semestre está começando, e \(NameStudent) percebe que ainda não teve muitas interações com outras pessoas da sala. O tempo
-para criar laços está se esgotando. Nesse momento, ele:
+para criar laços está se esgotando. Nesse momento, el\(pronums):
 
-1. Prefere ficar sozinho e seguir sua rotina como de costume
-2. Decide vencer a timidez e puxar assunto com alguém
+""")
+    
+print("""
 
+      1. Prefere ficar sozinh\(pronums) e seguir sua rotina como de costume
+      2. Decide vencer a timidez e puxar assunto com alguém
+      
 """)
 print("SEU FOCO: \(Life)")
 authquestion = false
@@ -599,7 +605,7 @@ print("""
 
 Tudo ficou calmo por um tempo mas a p3 está cada vez mais perto então chegou a hora de tomar sua decisão
 Essa matéria além de entediante é uma das mais complicadas do seu semestre
-Pense com extremo cuidado como você deve seguir. Sua p3 será na semana seguinte, \(NameStudent) escolhe:
+Pense com extremo cuidado como seguir. Sua p3 será na semana seguinte, \(NameStudent) escolhe:
 
 1. Revisar a matéria com calma e descansar
 2. Deixar pra revisar de última hora
