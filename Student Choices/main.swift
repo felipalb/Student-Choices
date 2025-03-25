@@ -16,13 +16,7 @@ var NameStudent : String = ""
 var Gender : String? = nil
 // declaro como string opcional armazena entrada tipo string e tipo nil
 var auth = false
-var auth2 = false
-var authQuestion1 = false
-var authquestion = false
-var authquestion2 = false
 // variavel de autenticacao do loops
-var Answer2 : String? = nil
-var Answer1 : String? = nil
 var Answer : String? = nil
 var Age : Int = 0
 var University : String = ""
@@ -91,19 +85,19 @@ func VerifyLife (){
 // definindo uma funcao de algo repetitivo que faz a classificacao e validacao dos dados coletados a partir das respostas
 func doingchoices (){
     // sempre que iniciar a func auth2 = false, para existir a validacao
-    auth2 = false
-    while !auth2{
+    auth = false
+    while !auth{
         if let input = readLine(), let choice = Int(input){
             switch choice{
             case 1:
                 Choices = "Negativo"
-                auth2 = true
+                auth = true
             case 2:
                 Choices = "Positivo"
-                auth2 = true
+                auth = true
             case 3:
                 Choices = "Neutro"
-                auth2 = true
+                auth = true
             default:
                 print("Insira os numerais 1,2 ou 3 referente a alternativa desejada")
             }
@@ -265,21 +259,21 @@ print("\n---------------------------------------------------\n")
 print("\(NameStudent) chega na maior impolgação, e se depara com a dificil escolha: \n1. Sair para beber com os calouros \n2. Participar da aula de fisica mega legal \n3. Ver a aula e depois sair para beber")
 print(callPrism(texto: "SEU FOCO: \(Life)", cor: .yellow, corTexto: .white))
 
-auth2 = false
+auth = false
 // ouve a entrada, cria "choice" que vai receber um Int (1,2,3)
 // enquanto auth2 nao for true
-while !auth2{
+while !auth{
     if let input = readLine(), let choice = Int(input){
         switch choice{
             case 1:
                 Choices = "Negativo"
-                auth2 = true
+                auth = true
             case 2:
                 Choices = "Positivo"
-                auth2 = true
+                auth = true
             case 3:
                 Choices = "Neutro"
-                auth2 = true
+                auth = true
         default:
             print("Insira os numerais 1,2 ou 3 referente a alternativa desejada")
             
@@ -326,19 +320,19 @@ print("""
 3. Estudar exageradamente no fim de semana para poder curtir a festa
 """)
 print(callPrism(texto: "SEU FOCO: \(Life)", cor: .yellow, corTexto: .white))
-auth2 = false
-while !auth2{
+auth = false
+while !auth{
     if let input = readLine(), let choice = Int(input){
         switch choice{
             case 1:
                 Choices = "Positivo"
-                auth2 = true
+                auth = true
             case 2:
                 Choices = "Negativo"
-                auth2 = true
+                auth = true
             case 3:
                 Choices = "Negativo"
-                auth2 = true
+                auth = true
         default:
             print("Opção inválida. Escolha 1, 2 ou 3.")
         }
@@ -364,19 +358,19 @@ parece ter sumido. Agora, é preciso tomar uma decisão difícil para lidar com 
 """)
 print(callPrism(texto: "SEU FOCO: \(Life)", cor: .yellow, corTexto: .white))
 
-auth2 = false
-while !auth2{
+auth = false
+while !auth{
     if let input = readLine(), let choice = Int(input){
         switch choice{
             case 1:
                 Choices = "Positivo"
-                auth2 = true
+                auth = true
             case 2:
                 Choices = "Negativo"
-                auth2 = true
+                auth = true
             case 3:
                 Choices = "Positivo"
-                auth2 = true
+                auth = true
         default:
             print("Opção inválida. Escolha 1, 2 ou 3.")
         }
@@ -402,19 +396,19 @@ seu foco e a pressão aumenta. Agora, é hora de tomar uma decisão difícil sob
 """)
 print(callPrism(texto: "SEU FOCO: \(Life)", cor: .yellow, corTexto: .white))
 
-auth2 = false
-while !auth2{
+auth = false
+while !auth{
     if let input = readLine(), let choice = Int(input){
         switch choice{
             case 1:
                 Choices = "Positivo"
-                auth2 = true
+                auth = true
             case 2:
                 Choices = "Neutro"
-                auth2 = true
+                auth = true
             case 3:
                 Choices = "Negativo"
-                auth2 = true
+                auth = true
         default:
             print("Opção inválida. Escolha 1, 2 ou 3.")
         }
@@ -447,19 +441,19 @@ dedique mais ao trabalho do que aos estudos. Agora, é hora de tomar uma decisã
 print(callPrism(texto: "SEU FOCO: \(Life)", cor: .yellow, corTexto: .white))
 
 
-auth2 = false
-while !auth2{
+auth = false
+while !auth{
     if let input = readLine(), let choice = Int(input){
         switch choice{
             case 1:
                 Choices = "Neutro"
-                auth2 = true
+                auth = true
             case 2:
                 Choices = "Positivo"
-                auth2 = true
+                auth = true
             case 3:
                 Choices = "Positivo"
-                auth2 = true
+                auth = true
         default:
             print("Opção inválida. Escolha 1, 2 ou 3.")
         }
@@ -484,21 +478,21 @@ decidir como agir:
 
 """)
 print(callPrism(texto: "SEU FOCO: \(Life)", cor: .yellow, corTexto: .white))
-auth2 = false
+auth = false
 
-auth2 = false
-while !auth2{
+auth = false
+while !auth{
     if let input = readLine(), let choice = Int(input){
         switch choice{
             case 1:
                 Choices = "Positivo"
-                auth2 = true
+                auth = true
             case 2:
                 Choices = "Neutro"
-                auth2 = true
+                auth = true
             case 3:
                 Choices = "Positivo"
-                auth2 = true
+                auth = true
         default:
             print("Opção inválida. Escolha 1, 2 ou 3.")
         }
@@ -534,19 +528,19 @@ O problema é que \(NameStudent) se sente um pouco insegur\(pronums), e agora pr
 print(callPrism(texto: "SEU FOCO: \(Life)", cor: .yellow, corTexto: .white))
 
 
-auth2 = false
-while !auth2{
+auth = false
+while !auth{
     if let input = readLine(), let choice = Int(input){
         switch choice{
             case 1:
                 Choices = "Positivo"
-                auth2 = true
+                auth = true
             case 2:
                 Choices = "Negativo"
-                auth2 = true
+                auth = true
             case 3:
                 Choices = "Neutro"
-                auth2 = true
+                auth = true
         default:
             print("Opção inválida. Escolha 1, 2 ou 3.")
         }
@@ -561,8 +555,8 @@ VerifyLife ()
 print("\n---------------------------------------------------\n")
 Thread.sleep(forTimeInterval: 2)
 
-authquestion = false
-while !authquestion {
+auth = false
+while !auth {
 typewriter("""
 
 A última semana do semestre está começando, e \(NameStudent) percebe que ainda não teve muitas interações com outras pessoas da sala. O tempo
@@ -577,15 +571,15 @@ print("""
       
 """)
 print(callPrism(texto: "SEU FOCO: \(Life)", cor: .yellow, corTexto: .white))
-authquestion = false
+auth = false
 if let input = readLine(), let x = Int(input){
       switch x {
           case 1:
             Answer = "ficar sozinho "   // boa
-            authquestion = true
+            auth = true
           case 2:
             Answer = "interagir"  // ruim
-            authquestion = true
+            auth = true
      default:
         print("Valor inválido,digite 1 ou 2 para responder")
       }
@@ -597,8 +591,8 @@ VerifyLife ()
 
 print("\n---------------------------------------------------\n")
 Thread.sleep(forTimeInterval: 2)
-authQuestion1 = false
-while !authQuestion1 {
+auth = false
+while !auth {
 print("""
 
 Tudo ficou calmo por um tempo mas a p3 está cada vez mais perto então chegou a hora de tomar sua decisão
@@ -613,13 +607,13 @@ print(callPrism(texto: "SEU FOCO: \(Life)", cor: .yellow, corTexto: .white))
 if let input = readLine(), let x = Int(input){
   switch x {
       case 1:
-        Answer1 = "estudar" // boa
-        authQuestion1 = true
+        Answer = "estudar" // boa
+        auth = true
         
         
       case 2:
-        Answer1 = "sair" // caso a resposta seja sair continua pra proxima pergunta
-        authQuestion1 = true
+        Answer = "sair" // caso a resposta seja sair continua pra proxima pergunta
+        auth = true
         
   default:
     print("Valor inválido,digite 1 ou 2 para responder")
@@ -629,7 +623,7 @@ if let input = readLine(), let x = Int(input){
 VerifyChoices()
 VerifyLife ()
 
-if  Answer1 == "estudar"{    // final bom
+if  Answer == "estudar"{    // final bom
     print("""
 
 ---------------------------------------------------
@@ -641,15 +635,16 @@ suas avaliações. 😃
 ---------------------------------------------------
 
 """)
-    authquestion2 = true
+    auth = true
 }
-if Answer2 == "sair"{
-    authquestion2 = true
+if Answer == "sair"{
+    auth = true
     }
 
+auth = false
 Thread.sleep(forTimeInterval: 2)
 // pergunta pra caso a resposta seja sair
-while !authquestion2 {
+while !auth {
     print("""
       
 Seu professor demorou algum tempo até divulgar as notas da p3 e as médias, \(NameStudent) acabou ficando de exame mas já tinha programado uma
@@ -663,18 +658,18 @@ print(callPrism(texto: "SEU FOCO: \(Life)", cor: .yellow, corTexto: .white))
 if let input = readLine(), let y = Int(input){
   switch y {
       case 1:
-        Answer2 = "sair"    // final ruim
-        authquestion2 = true
+        Answer = "sair"    // final ruim
+        auth = true
       case 2:
-        Answer2 = "estudar" // printa  intermediario
-        authquestion2 = true
+        Answer = "estudar" // printa  intermediario
+        auth = true
   default:
     print("Valor inválido, digite 1 ou 2 para responder")
     }
 VerifyChoices()
 VerifyLife ()
     
-if Answer2 == "sair"{
+if Answer == "sair"{
 print("""
        
 ---------------------------------------------------
@@ -687,7 +682,7 @@ print("""
 """)
 
   }
-if Answer2 == "estudar"{
+if Answer == "estudar"{
         print("""
 
 ---------------------------------------------------
