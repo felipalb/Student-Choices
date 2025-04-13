@@ -5,6 +5,8 @@
 //  Created by Felipe Alberto on 24/02/25.
 //
 
+// usar let, em variaveis de validacao, tirar valores false antes das chamadas
+
 import Foundation
 import Prism
 
